@@ -3,4 +3,4 @@ import Welcome from "#components/Welcome";
 import Dock from "#components/Dock";
 import useWindowStore from "#store/Window";
 
-export { Navbar, Welcome, Dock, useWindowStore};
+export { Navbar, Welcome, Dock, useWindowStore };
