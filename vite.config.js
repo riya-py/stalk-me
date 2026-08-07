@@ -4,9 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 import {resolve, dirname} from 'path'
 import {fileURLToPath} from 'url'
 
-// ./../components/something
-// @components/component
-
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -16,6 +13,7 @@ export default defineConfig({
       '#store': resolve(dirname(fileURLToPath(import.meta.url)), 'src/store'),
       '#hoc': resolve(dirname(fileURLToPath(import.meta.url)), 'src/hoc'),
       '#assets': resolve(dirname(fileURLToPath(import.meta.url)), 'src/assets'),
+      '#windows': resolve(dirname(fileURLToPath(import.meta.url)), 'src/windows'),
     }
   }
 })
