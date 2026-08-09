@@ -1,7 +1,9 @@
+import useWindowStore from "#store/Window";
 import { navLinks, navIcons } from "#constants/index.js";
 import dayjs from "dayjs";
 
 const Navbar = () => {
+  const {openWindow} = useWindowStore();
   return (
     <nav>
       <div>
@@ -10,7 +12,7 @@ const Navbar = () => {
 
         <ul>
           {navLinks.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} onClick={() => openWindow(item.type)}>
               <p>{item.name}</p>
             </li>
           ))}

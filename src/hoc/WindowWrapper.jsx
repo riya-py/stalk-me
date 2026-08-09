@@ -1,55 +1,66 @@
-import { useWindowStore } from "#components";
+import useWindowStore from "#store/Window";
 import { useGSAP } from "@gsap/react";
 import { useLayoutEffect, useRef } from "react";
-import gsap from "gsap"
+import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 const WindowWrapper = (Component, windowKey) => {
   const Wrapper = (props) => {
     const { focusWindow, windows } = useWindowStore();
     const { isOpen, zIndex } = windows[windowKey];
+
     const ref = useRef(null);
 
-    useGSAP(()=> {
-        const el= ref.current
-        if(!el || !isOpen) return;
+    useGSAP(() => {
+      const el = ref.current;
 
-        el.style.display = 'block';
+      if (!el || !isOpen) return;
 
-        gsap.fromTo(el, {scale:0.8, opacity:0, y:40}, {
-            scale: 1,
-            opacity:1,
-            y:0, 
-            duration:0.3,
-            ease: "power3.out"
-        })
+      el.style.display = "block";
 
-    },[isOpen])
-
+      gsap.fromTo(
+        el,
+        {
+          scale: 0.8,
+          opacity: 0,
+          y: 40,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+          ease: "power3.out",
+        }
+      );
+    }, [isOpen]);
 
     useGSAP(() => {
-        const el=ref.current
-        if(!el) return;
+      const el = ref.current;
 
-        const [instance] = Draggable.create(el, {onPress:() => focusWindow(windowKey)})
+      if (!el) return;
 
-        return () => instance.kill();
-    })
+      const [instance] = Draggable.create(el, {
+        onPress: () => focusWindow(windowKey),
+      });
 
-    useLayoutEffect(()=> {
-        const el=ref.current
-        if(!el) return;
-        el.style.display = isOpen ? "block" : "none";
+      return () => instance.kill();
+    });
 
-    },[isOpen])
+    useLayoutEffect(() => {
+      const el = ref.current;
 
+      if (!el) return;
+
+      el.style.display = isOpen ? "block" : "none";
+    }, [isOpen]);
 
     return (
       <section
         id={windowKey}
         ref={ref}
         style={{ zIndex }}
-        className="absolute"
+        className="window absolute"
       >
         <Component {...props} />
       </section>
