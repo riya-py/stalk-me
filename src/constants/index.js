@@ -67,7 +67,7 @@ const dockApps = [
   },
   {
     id: "chatbot",
-    name: "Askme",
+    name: "Ask me",
     icon: "chatbot.png",
     canOpen: true,
     type: "window",

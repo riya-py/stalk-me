@@ -86,6 +86,7 @@ body {
     }
 
     .tooltip {
+      white-space: nowrap;
       @apply !py-1 !px-3 !w-fit !text-center !text-xs !rounded-md !bg-blue-200 !text-blue-900 !shadow-2xl;
     }
 
