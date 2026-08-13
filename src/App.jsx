@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 import { Navbar, Welcome, Dock } from "#components";
-import { Terminal, SafariWindow, Resume, Chatbot, Mail, Github, Linkedin } from "#windows";
+import { Terminal, SafariWindow, Resume, Chatbot, Mail, Github, Linkedin, Finder } from "#windows";
 
 gsap.registerPlugin(Draggable);
 
@@ -21,6 +21,7 @@ const App = () => {
       <Linkedin />
 
       <Dock />
+      <Finder />
     </main>
   );
 };
