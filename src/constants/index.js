@@ -37,22 +37,18 @@ const navIcons = [
 
 const dockApps = [
   {
-    id: "finder",
-    name: "Portfolio", // was "Finder"
-    icon: "finder.png",
+    id: "mail",
+    name: "Mail",
+    icon: "mail.png",
     canOpen: true,
+    type: "window"
   },
   {
-    id: "safari",
-    name: "Articles", // was "Safari"
-    icon: "safari.png",
+    id: "github",
+    name: "GitHub",
+    icon: "github.png",
     canOpen: true,
-  },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
+    type: "window" // 👈 your GitHub profile
   },
   {
     id: "contact",
@@ -62,15 +58,17 @@ const dockApps = [
   },
   {
     id: "terminal",
-    name: "Skills", // was "Terminal"
+    name: "Skills",
     icon: "terminal.png",
     canOpen: true,
+    type: "window",
   },
   {
-    id: "trash",
-    name: "Archive", // was "Trash"
-    icon: "trash.png",
-    canOpen: false,
+    id: "chatbot",
+    name: "Askme",
+    icon: "chatbot.png",
+    canOpen: true,
+    type: "window",
   },
 ];
 
@@ -492,6 +490,9 @@ const WINDOW_CONFIG = {
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  chatbot: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  mail: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },     // 👈 add this
+  github: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },   // 👈 add this
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 

@@ -60,47 +60,52 @@ const Dock = () => {
     }, []);
 
     const toggleApp = (app) => {
-        if(!app.canOpen) return;
+        if (!app.canOpen) return;
 
-        const window=windows[app.id];
-        if(!window) {
-            console.error(`windows not found for app: ${app.id}`)
-            return
+        // NEW: mail & github just open a link, no window needed
+        if (app.type === "link") {
+            window.open(app.href, "_blank", "noopener,noreferrer");
+            return;
         }
-        if(window.isOpen) {
-            closeWindow(app.id)
+
+        const win = windows[app.id]; // renamed from `window` to avoid shadowing global window
+        if (!win) {
+            console.error(`windows not found for app: ${app.id}`);
+            return;
+        }
+        if (win.isOpen) {
+            closeWindow(app.id);
         } else {
-            openWindow(app.id)
+            openWindow(app.id);
         }
 
-        console.log(windows)
+        console.log(windows);
     };
 
     return (
         <section id="dock">
             <div ref={dockRef} className="dock-container">
-                {dockApps.map(({ id, name, icon, canOpen }) => (
-                    <div key={id} className="relative flex justify-center">
-                        <button
-                            type="button"
-                            className="dock-icon"
-                            aria-label={name}
-                            data-tooltip-id="dock-tooltip"
-                            data-tooltip-content={name}
-                            data-tooltip-delay-show={150}
-                            disabled={!canOpen}
-                            onClick={() => toggleApp({ id, canOpen })}
-                        >
-                            <img
-                                src={`/images/${icon}`}
-                                alt={name}
-                                loading="lazy"
-                                className={canOpen ? "" : "opacity-60"}
-                            />
-                        </button>
-                    </div>
+                {dockApps.map((app) => (
+                <div key={app.id} className="relative flex justify-center">
+                    <button
+                    type="button"
+                    className="dock-icon"
+                    aria-label={app.name}
+                    data-tooltip-id="dock-tooltip"
+                    data-tooltip-content={app.name}
+                    data-tooltip-delay-show={150}
+                    disabled={!app.canOpen}
+                    onClick={() => toggleApp(app)}
+                    >
+                    <img
+                        src={`/images/${app.icon}`}
+                        alt={app.name}
+                        loading="lazy"
+                        className={app.canOpen ? "" : "opacity-60"}
+                    />
+                    </button>
+                </div>
                 ))}
-
                 <Tooltip
                     id="dock-tooltip"
                     place="top"
