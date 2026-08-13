@@ -5,11 +5,6 @@ const navLinks = [
     type: "finder",
   },
   {
-    id: 3,
-    name: "Contact",
-    type: "contact",
-  },
-  {
     id: 4,
     name: "Resume",
     type: "resume",
@@ -37,6 +32,12 @@ const navIcons = [
 
 const dockApps = [
   {
+    id: "finder",
+    name: "Portfolio", // was "Finder"
+    icon: "finder.png",
+    canOpen: true,
+  },
+  {
     id: "mail",
     name: "Mail",
     icon: "mail.png",
@@ -51,10 +52,11 @@ const dockApps = [
     type: "window" // 👈 your GitHub profile
   },
   {
-    id: "contact",
-    name: "Contact", // or "Get in touch"
-    icon: "contact.png",
-    canOpen: true,
+  id: "linkedin",
+  name: "LinkedIn",
+  icon: "linkedin.png", // 👈 see note below
+  canOpen: true,
+  type: "window",
   },
   {
     id: "terminal",
@@ -493,6 +495,7 @@ const WINDOW_CONFIG = {
   chatbot: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   mail: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },     // 👈 add this
   github: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },   // 👈 add this
+  linkedin: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 

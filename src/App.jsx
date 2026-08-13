@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 import { Navbar, Welcome, Dock } from "#components";
-import { Terminal, SafariWindow, Resume, Chatbot, Mail, Github, Contact } from "#windows";
+import { Terminal, SafariWindow, Resume, Chatbot, Mail, Github, Linkedin } from "#windows";
 
 gsap.registerPlugin(Draggable);
 
@@ -18,7 +18,7 @@ const App = () => {
       <Chatbot />
       <Mail />
       <Github />
-      <Contact />
+      <Linkedin />
 
       <Dock />
     </main>
