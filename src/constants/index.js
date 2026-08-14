@@ -217,7 +217,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Vector Database from Scratch",
+      name: "Vector Database",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
@@ -252,7 +252,7 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "DPI Engine (Python Port)",
+      name: "DPI Engine",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -287,7 +287,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Hand Mouse — Gesture Control",
+      name: "Hand Mouse",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",

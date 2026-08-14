@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
-import { Navbar, Welcome, Dock } from "#components";
+import { Navbar, Welcome, Dock, Home } from "#components";
 
 import {
     Terminal,
@@ -37,6 +37,7 @@ const App = () => {
             <Finder />
             <Text />
             <ImageFile />
+            <Home />
         </main>
     );
 };
