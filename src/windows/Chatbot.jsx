@@ -35,8 +35,7 @@ const Chatbot = () => {
         <h2>Chatbot</h2>
       </div>
 
-      {/* Anchored to header-bottom / window edges — not dependent on flex-grow */}
-      <div className='absolute left-0 right-0 bottom-0 top-[52px] flex flex-col bg-white overflow-hidden'>
+      <div className='absolute left-0 right-0 bottom-0 top-[52px] flex flex-col bg-white dark:bg-neutral-900 overflow-hidden'>
         <div className='flex-1 overflow-y-auto space-y-2 p-4'>
           {messages.map((msg, i) => (
             <div
@@ -45,32 +44,31 @@ const Chatbot = () => {
                 msg.sender === 'user' ? 'justify-end' : 'justify-start'
               }`}
             >
-              {msg.sender === 'bot' && <Bot size={18} className='mt-1 shrink-0' />}
+              {msg.sender === 'bot' && <Bot size={18} className='mt-1 shrink-0 dark:text-neutral-300' />}
               <p
                 className={`px-3 py-2 rounded-2xl text-sm max-w-[75%] ${
                   msg.sender === 'bot'
-                    ? 'bg-gray-200 text-black rounded-tl-sm'
+                    ? 'bg-gray-200 dark:bg-neutral-700 text-black dark:text-neutral-100 rounded-tl-sm'
                     : 'bg-blue-500 text-white rounded-tr-sm'
                 }`}
               >
                 {msg.text}
               </p>
-              {msg.sender === 'user' && <User size={18} className='mt-1 shrink-0' />}
+              {msg.sender === 'user' && <User size={18} className='mt-1 shrink-0 dark:text-neutral-300' />}
             </div>
           ))}
 
           {isLoading && (
             <div className='flex items-center gap-2 justify-start'>
-              <Bot size={18} className='shrink-0' />
-              <p className='px-3 py-2 rounded-2xl text-sm bg-gray-200 text-black rounded-tl-sm'>
+              <Bot size={18} className='shrink-0 dark:text-neutral-300' />
+              <p className='px-3 py-2 rounded-2xl text-sm bg-gray-200 dark:bg-neutral-700 text-black dark:text-neutral-100 rounded-tl-sm'>
                 Typing...
               </p>
             </div>
           )}
         </div>
 
-        {/* mt-auto is a safety net so this stays pinned bottom no matter what */}
-        <div className='mt-auto flex items-center gap-2 border-t px-4 py-3 bg-white'>
+        <div className='mt-auto flex items-center gap-2 border-t dark:border-neutral-700 px-4 py-3 bg-white dark:bg-neutral-900'>
           <input
             type='text'
             value={input}
@@ -78,7 +76,7 @@ const Chatbot = () => {
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
             disabled={isLoading}
-            className='flex-1 rounded-full px-4 py-2 text-sm border outline-none disabled:opacity-50'
+            className='flex-1 rounded-full px-4 py-2 text-sm border dark:border-neutral-600 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-500 outline-none disabled:opacity-50'
           />
           <button
             type='button'
