@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -23,7 +23,7 @@ html.dark {
 }
 
 @theme {
-  --font-georama: "Georama", sans-serif;
+  --font-georama: "Fraunces", serif;
   --font-roboto: "Roboto Mono", monospace;
   --breakpoint-3xl: 1920px;
 }
@@ -54,6 +54,9 @@ html.dark {
       &:last-child {
         @apply max-sm:hidden;
       }
+      > p {
+        @apply dark:text-white;
+      }
     }
 
     ul {
@@ -67,6 +70,17 @@ html.dark {
     time {
       @apply text-sm font-medium text-black dark:text-white;
     }
+
+    img.icon-hover,
+    img[alt="Logo"] {
+      @apply transition-[filter];
+      filter: none;
+    }
+  }
+
+  html.dark nav img.icon-hover,
+  html.dark nav img[alt="Logo"] {
+    filter: invert(1) brightness(2);
   }
 }
 

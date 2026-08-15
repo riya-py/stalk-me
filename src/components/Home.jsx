@@ -21,7 +21,17 @@ const Home = () => {
     };
 
     useGSAP(() => {
-        Draggable.create(".folder");
+        const navEl = document.querySelector("nav");
+        const navHeight = navEl ? navEl.offsetHeight : 0;
+
+        Draggable.create(".folder", {
+            bounds: {
+                top: navHeight,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight - navHeight,
+            },
+        });
     });
 
     return (
