@@ -9,10 +9,17 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+html {
+  background-image: url("/images/wallpaperlight.png");
+}
+
+html.dark {
+  background-image: url("/images/wallpaperdark.png");
 }
 
 @theme {
@@ -64,8 +71,8 @@ body {
 }
 
 @layer components {
-  .icon {
-    @apply p-1 hover:bg-gray-200 dark:hover:bg-white/10 rounded hover:cursor-default;
+   .icon {
+    @apply p-1 hover:bg-gray-200 dark:hover:bg-white/10 rounded hover:cursor-pointer;
   }
 
   #welcome {
