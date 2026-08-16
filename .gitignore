@@ -3,6 +3,8 @@ backend/.venv/
 backend/venv/
 backend/__pycache__/
 *.pyc
+.pdf
+*.pdf
 
 # Node
 frontend/node_modules/
