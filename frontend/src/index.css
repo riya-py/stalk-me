@@ -401,7 +401,7 @@ html.dark {
   }
 
   #chatbot {
-    @apply w-[420px] h-[550px] absolute top-20 left-5/12 bg-white dark:bg-neutral-900 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
+    @apply w-[360px] h-[440px] absolute top-20 left-5/12 bg-white dark:bg-neutral-900 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden flex flex-col;
 
     h2 {
       @apply font-bold text-sm text-center w-full dark:text-white;

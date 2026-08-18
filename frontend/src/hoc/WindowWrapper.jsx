@@ -40,7 +40,15 @@ const WindowWrapper = (Component, windowKey) => {
 
       if (!el) return;
 
+      // Only drag when grabbing the header, not the whole window.
+      // This keeps inputs/buttons/scroll areas inside the window
+      // fully interactive.
+      const handle = el.querySelector("#window-header");
+
+      if (!handle) return;
+
       const [instance] = Draggable.create(el, {
+        trigger: handle,
         onPress: () => focusWindow(windowKey),
       });
 
