@@ -318,6 +318,38 @@ const WORK_LOCATION = {
         },
       ],
     },
+        // ▶ Project 4
+    {
+      id: 8,
+      name: "BitTorrent Client",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "BitTorrent Client Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-52 left-5",
+          description: [
+            "A BitTorrent client built entirely from scratch — bencode parser, tracker client, peer wire protocol, piece manager, and SHA-1 verification, all implemented directly against the protocol spec with no torrent library underneath.",
+            "It's paired with a React dashboard that makes every step of the protocol visible as it happens: watching a .torrent file turn into an infohash, a tracker announce, a list of peers, a handshake, and finally verified bytes written to disk.",
+            "It implements real peer wire messages (choke/unchoke, have, bitfield, request, piece), concurrent per-peer downloading with asyncio, and rarest-first piece selection — plus a simulation mode that reproduces corruption, peer failure, and choking cycles without a real swarm.",
+            "Built with a Python/FastAPI backend and a TypeScript/React frontend, backed by a full pytest suite covering every phase of the protocol.",
+          ],
+        },
+        {
+          id: 2,
+          name: "bittorrent-client.repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/riya-py/Bit-torrent",
+          position: "top-10 right-20",
+        },
+      ],
+    },
   ],
 };
 

@@ -53,7 +53,7 @@ const WindowWrapper = (Component, windowKey) => {
       });
 
       return () => instance.kill();
-    });
+    }, [isOpen]);
 
     useLayoutEffect(() => {
       const el = ref.current;
