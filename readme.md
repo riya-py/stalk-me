@@ -1,4 +1,4 @@
-# HireMeAI — Interactive AI Portfolio
+# Interactive MAC-OS-AI Portfolio
 
 An interactive, macOS-inspired developer portfolio with an AI-powered recruiter assistant.
 
