@@ -74,31 +74,6 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [
-  {
-    id: 1,
-    date: "Sep 2, 2025",
-    title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
-  },
-  {
-    id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-  },
-  {
-    id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-  },
-];
-
 const techStack = [
   {
     category: "Languages",
@@ -149,62 +124,12 @@ const socials = [
   },
 ];
 
-const photosLinks = [
-  {
-    id: 1,
-    icon: "/icons/gicon1.svg",
-    title: "Library",
-  },
-  {
-    id: 2,
-    icon: "/icons/gicon2.svg",
-    title: "Memories",
-  },
-  {
-    id: 3,
-    icon: "/icons/file.svg",
-    title: "Places",
-  },
-  {
-    id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
-    icon: "/icons/gicon5.svg",
-    title: "Favorites",
-  },
-];
-
-const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
-];
-
 export {
   navLinks,
   navIcons,
   dockApps,
-  blogPosts,
   techStack,
   socials,
-  photosLinks,
-  gallery,
 };
 
 const WORK_LOCATION = {
@@ -217,15 +142,15 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Vector Database",
+      name: "Own AI",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5",
-      windowPosition: "top-[5vh] left-5",
+      windowPosition: "top-[5vh] left-6",
       children: [
         {
           id: 1,
-          name: "Vector DB Project.txt",
+          name: "Own AI Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
@@ -239,11 +164,11 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "vector-db.repo",
+          name: "own-ai.repo",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/riya-py/OWN-AI", // 👈 add your real repo link
+          href: "https://github.com/riya-py/OWN-AI",
           position: "top-10 right-20",
         },
       ],
@@ -251,79 +176,12 @@ const WORK_LOCATION = {
 
     // ▶ Project 2
     {
-      id: 6,
-      name: "DPI Engine",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-52 right-80",
-      windowPosition: "top-[20vh] left-7",
-      children: [
-        {
-          id: 1,
-          name: "DPI Engine Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 right-10",
-          description: [
-            "A Deep Packet Inspection engine, ported line-for-line in logic to Python — it reads live network captures and identifies what app is generating each connection.",
-            "Instead of guessing from ports alone, it inspects TLS SNI, HTTP Host headers, and DNS queries to recognize traffic from apps like YouTube, Facebook, and TikTok, then applies IP, domain, and port-based blocking rules.",
-            "Think of it like airport security for network packets — every connection gets classified and checked against the rules before it's allowed through.",
-            "It ships in three flavors: a simple single-threaded version, a multi-threaded pipeline with load-balanced worker threads, and a modular version — all built on pure Python standard library, no external dependencies.",
-          ],
-        },
-        {
-          id: 2,
-          name: "dpi-engine.repo",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://github.com/riya-py/packet-analyzer", // 👈 add your real repo link
-          position: "top-20 left-20",
-        },
-      ],
-    },
-
-    // ▶ Project 3
-    {
-      id: 7,
-      name: "Hand Mouse",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
-      children: [
-        {
-          id: 1,
-          name: "Hand Mouse Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Hand Mouse lets you control your cursor using nothing but hand gestures, tracked live through your webcam.",
-            "Move your index finger to move the cursor, pinch your thumb and index finger to click, pinch thumb and middle finger to right-click, and raise all four fingers to scroll — no mouse required.",
-            "Think of it like Minority Report for your desktop — powered by MediaPipe's hand-tracking model and PyAutoGUI translating gestures into real cursor input.",
-            "It's built entirely in Python, works with any standard webcam, and even takes a screenshot when you close your fist.",
-          ],
-        },
-        {
-          id: 2,
-          name: "hand-mouse.repo",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://github.com/riya-py/hand-mouse", // 👈 add your real repo link
-          position: "top-10 right-20",
-        },
-      ],
-    },
-        // ▶ Project 4
-    {
       id: 8,
-      name: "BitTorrent Client",
+      name: "BitTorrent",
       icon: "/images/folder.png",
       kind: "folder",
+      position: "top-10 left-44",
+      windowPosition: "top-[32vh] left-6",
       children: [
         {
           id: 1,
@@ -331,7 +189,7 @@ const WORK_LOCATION = {
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
-          position: "top-52 left-5",
+          position: "top-5 left-10",
           description: [
             "A BitTorrent client built entirely from scratch — bencode parser, tracker client, peer wire protocol, piece manager, and SHA-1 verification, all implemented directly against the protocol spec with no torrent library underneath.",
             "It's paired with a React dashboard that makes every step of the protocol visible as it happens: watching a .torrent file turn into an infohash, a tracker announce, a list of peers, a handshake, and finally verified bytes written to disk.",
@@ -346,6 +204,41 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "url",
           href: "https://github.com/riya-py/Bit-torrent",
+          position: "top-10 right-20",
+        },
+      ],
+    },
+
+    // ▶ Project 3
+    {
+      id: 9,
+      name: "EvoAgent",
+      icon: "/images/folder.png",
+      kind: "folder",
+      position: "top-10 left-80",
+      windowPosition: "top-[59vh] left-6",
+      children: [
+        {
+          id: 1,
+          name: "EvoAgent Project.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          position: "top-5 left-5",
+          description: [
+            "A multi-agent LLM competition and evolution system, built from scratch on local Ollama models — eight AI personalities answer the same question, three independent judges score them anonymously, and the weakest agent is eliminated each round.",
+            "Judges never see who wrote an answer before scoring it, and the three judges each weigh accuracy, reasoning, and utility differently, so they genuinely disagree instead of rubber-stamping each other.",
+            "The signature mechanic is evolution: when an agent is eliminated, an Evolution Engine studies exactly what made it lose and designs its successor, while a diversity checker stops the roster from converging into near-duplicates.",
+            "Every round streams live over WebSocket, with the full lineage — every score, critique, and ancestor — persisted in SQLite. Built with a Python/FastAPI backend and a React dashboard.",
+          ],
+        },
+        {
+          id: 2,
+          name: "evoagent.repo",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://github.com/riya-py/EvoAgent",
           position: "top-10 right-20",
         },
       ],
